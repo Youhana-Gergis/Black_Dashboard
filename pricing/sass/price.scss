@@ -1,0 +1,493 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+$color-white:#ffffff;
+$color-white2:#ffffffcc;
+$color-white3:#ffffffb2;
+body{
+    background: #1e1e2f;
+}
+@mixin button{
+    background-position: 100% 0;
+    background-size: 210% 210%;
+    transition: all .15s ease;
+    box-shadow: none;
+    color: $color-white;
+    padding: 11px 40px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+@mixin h1-style{
+    position: absolute;
+    font-size: 60px;
+    top: 0;
+    background-color: transparent;
+    font-family: fantasy;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+@mixin list-style{
+    text-align: center;
+    list-style: none;
+    padding: 5px 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    flex-direction: column;
+    .title-page{
+        h1{
+            text-align: center;
+            color: $color-white2;
+            font-weight: 100;
+            margin-bottom: 20px;
+        }
+        h4{
+            color: $color-white3;
+            opacity: 0.7;
+            font-weight: 100;
+            font-size: 1.1rem;
+            max-width: 550px;
+            text-align: center;
+            line-height: 25px;
+        }
+    }
+    .cards-pricing{
+        padding: 50px 50px;
+        display: flex;
+        .card{
+            background: #27293d;
+            border-radius: 5px;
+            .card-header{
+                position: relative;
+                img{
+                    width: 100%;
+                    border-radius: 5px 0 0 0;
+                }
+                h1{
+                    color: #222a42;
+                    @include h1-style;
+                }
+            }
+            .card-body{
+                .list-group{
+                    .list-group-item{
+                        color: #ffffffe6;
+                        @include list-style;
+                    }
+                }
+            }
+            .card-price{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .text-on-back{
+                    position: relative;
+                    font-size: 9.5em;
+                    font-weight: 900;
+                    color: #3a2d4c;
+                }
+                .front{
+                    position: absolute;
+                    z-index: 99999;
+                    .text-on-front{
+                        @extend .plan;
+                        z-index: 2;
+                        font-size: 50px;
+                    }
+                    .plan{
+                        text-align: center;
+                        color: hsla(0,0%,100%,.9);
+                        font-weight: 900;
+                    }
+                }
+            }
+            .card-footer{
+                text-align: center;
+                padding: 0 0 20px 0;
+                button{
+                    background: #e14eca;
+                    background-image: linear-gradient(to bottom left,#e14eca,#ba54f5,#e14eca);
+                    background-color: #e14eca;
+                    @include button;
+                }
+                button:hover{
+                    box-shadow: 0 4px 6px rgba(50,50,93,.50), 0 1px 3px rgba(0,0,0,.10);
+                    transition: all 0.3s;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+        .card2{
+            background: $color-white;
+            border-radius: 5px;
+            .card-header{
+                position: relative;
+                img{
+                    width: 100%;
+                    border-radius: 5px 0 0 0;
+                }
+                h1{
+                    color: $color-white;
+                    @include h1-style;
+                }
+            }
+            .card-body{
+                .list-group{
+                    .list-group-item{
+                        color: #263148;
+                        @include list-style;
+                    }
+                }
+            }
+            .card-price{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .text-on-back{
+                    position: relative;
+                    font-size: 9.5em;
+                    font-weight: 900;
+                    color: #e5fef9;
+                }
+                .front{
+                    position: absolute;
+                    z-index: 99999;
+                    .text-on-front{
+                        text-align: center;
+                        color: #263148;
+                        font-weight: 900;
+                        z-index: 2;
+                        font-size: 50px;
+                    }
+                    .plan{
+                        text-align: center;
+                        color: #263148;
+                        font-weight: 900;
+                    }
+                }
+            }
+            .card-footer{
+                text-align: center;
+                padding: 0 0 20px 0;
+                button{
+                    background: #00f2c3;
+                    background-image: linear-gradient(to bottom left,#00f2c3,#0098f0,#00f2c3);
+                    background-color: #00f2c3;
+                    @include button;
+                }
+                button:hover{
+                    box-shadow: 0 4px 6px rgba(50,50,93,.50), 0 1px 3px rgba(0,0,0,.10);
+                    transition: all 0.3s;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+        .card3{
+            transform: scale(1.1);
+            box-shadow: 0 0 40px 15px rgba(38,49,72,.3);
+            z-index: 3;
+            background: $color-white;
+            border-radius: 5px;
+            .card-header{
+                position: relative;
+                img{
+                    width: 100%;
+                    border-radius: 5px 0 0 0;
+                }
+                h1{
+                    color: $color-white;
+                    @include h1-style;
+                }
+            }
+            .card-body{
+                .list-group{
+                    .list-group-item{
+                        color: #263148;
+                        @include list-style;
+                    }
+                }
+            }
+            .card-price{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .text-on-back{
+                    position: relative;
+                    font-size: 9.5em;
+                    font-weight: 900;
+                    color: #fff3f1;
+                }
+                .front{
+                    position: absolute;
+                    z-index: 99999;
+                    .text-on-front{
+                        @extend .plan;
+                        z-index: 2;
+                        font-size: 50px;
+                    }
+                    .plan{
+                        text-align: center;
+                        color: hsla(0,0%,100%,.9);
+                        font-weight: 900;
+                        color: #263148;
+                    }
+                }
+            }
+            .card-footer{
+                text-align: center;
+                padding: 0 0 20px 0;
+                button{
+                    background-color: #ff6491!important;
+                    background-image: linear-gradient(to bottom left,#ff8d72,#ff6491,#ff8d72)!important;
+                    background-image: -moz-linear-gradient(to bottom left,#ff8d72,#ff6491,#ff8d72)!important;
+                    @include button;
+                }
+                button:hover{
+                    box-shadow: 0 4px 6px rgba(50,50,93,.50), 0 1px 3px rgba(0,0,0,.10);
+                    transition: all 0.3s;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+        .card4{
+            background: $color-white;
+            border-radius: 5px;
+            .card-header{
+                position: relative;
+                img{
+                    width: 100%;
+                    border-radius: 5px 0 0 0;
+                }
+                h1{
+                    color: $color-white;
+                    @include h1-style;
+                    left: 20px;
+                }
+            }
+            .card-body{
+                .list-group{
+                    .list-group-item{
+                        color: #263148;
+                        @include list-style;
+                    }
+                }
+            }
+            .card-price{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .text-on-back{
+                    position: relative;
+                    font-size: 9.5em;
+                    font-weight: 900;
+                    color: #ffeef4;
+                }
+                .front{
+                    position: absolute;
+                    z-index: 99999;
+                    .text-on-front{
+                        @extend .plan;
+                        z-index: 2;
+                        font-size: 50px;
+                    }
+                    .plan{
+                        text-align: center;
+                        font-weight: 900;
+                    }
+                }
+            }
+            .card-footer{
+                text-align: center;
+                padding: 0 0 20px 0;
+                button{
+                    background: #fd5d93;
+                    background-image: linear-gradient(to bottom left,#fd5d93,#ec250d,#fd5d93);
+                    background-color: #fd5d93;
+                    @include button;
+                }
+                button:hover{
+                    box-shadow: 0 4px 6px rgba(50,50,93,.50), 0 1px 3px rgba(0,0,0,.10);
+                    transition: all 0.3s;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+    .progressBar-text{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px 50px;
+        .text-plan{
+            h1{
+                color: $color-white2;
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+            p{
+                color: $color-white2;
+                font-size: 14px;
+                max-width: 400px;
+                line-height: 23px;
+            }
+        }
+        .progress-all{
+            flex: 0 0 30%;
+            .progress-bar{
+                span{
+                    color: $color-white;
+                    font-size: 12px;
+                }
+                .progress-back{
+                    margin-top: 5px;
+                    margin-bottom: 10px;
+                    width: 100%;
+                    display: flex;
+                    height: 0.4rem;
+                    overflow: hidden;
+                    font-size: .65625rem;
+                    background-color: rgba(0,0,0,.3);
+                    border-radius: 0.875rem;
+                    box-shadow: 0 0 0 3px rgba(0,0,0,.3);
+                    .progress-bar-style{
+                        background: #ff6491;
+                        background-image: linear-gradient(to bottom left,#ff6491,#ff8d72,#ff6491);
+                        background-size: 210% 210%;
+                        background-position: 100% 0;
+                        border-radius: 0.875rem;
+                        width: 60%;
+                        height: 100%;
+                    }
+                }
+            }
+            .progress-bar2{
+                @extend .progress-bar;
+                span{
+                    color: $color-white;
+                    font-size: 12px;
+                }
+                .progress-back2{
+                    @extend .progress-back;
+                    .progress-bar-style2{
+                        @extend .progress-bar-style;
+                        background: #ba54f5;
+                        background-image: linear-gradient(to bottom left,#ba54f5,#e14eca,#ba54f5);
+                        background-size: 210% 210%;
+                        background-position: 100% 0;
+                        width: 30%;
+                    }
+                }
+            }
+        }
+
+    }
+    .footer{
+        width: 100%;
+        .container-fluid{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 20px;
+            .nav-footer{
+                display: flex;
+                .nav-item{
+                    gap: 10px;
+                    margin-left: 10px;
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        color: $color-white;
+                        font-size: 15px;
+                        font-weight: 100;
+                    }
+                    a:hover{
+                        color: #e14eca;
+                    }
+
+                }
+            }
+            .copy-right{
+                a{
+                    text-decoration: none;
+                    color: #ba54f5;
+                }
+                a:hover{
+                    color: #e14eca;
+                }
+                h5{
+                    color: $color-white;
+                    font-weight: 100;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .container{
+        .cards-pricing{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+@media (max-width:767px) {
+    .container{
+        .title-page{
+            margin-bottom: 30px;
+        }
+        .cards-pricing{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            padding: 0 15px;
+            .card{
+                margin-bottom: 30px;
+            }
+            .card2{
+                margin-bottom: 30px;
+            }
+            .card3{
+                transform: scale(1);
+                z-index: 1;
+                margin-bottom: 30px;
+            }
+        }
+        .progressBar-text{
+            padding: 0 15px;
+            flex-direction: column;
+            .text-plan{
+                margin-top: 30px;
+               p{
+                max-width: 100%;
+               }
+            }
+            .progress-all{
+                width: 100%;
+            }
+        }
+        .footer{
+            .container-fluid{
+                flex-direction: column;
+                .nav-footer{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

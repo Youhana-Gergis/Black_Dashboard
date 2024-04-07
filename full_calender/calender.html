@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">  
+    <link rel="stylesheet" href="css/calender.css">
+    <title>Full calender</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="left-navbar">
+                <i class="fa-solid fa-list-ul icon-nav-left"></i>
+                <h3>DASHBOARD</h3>
+            </div>
+            <div class="right-navbar">
+                <div class="icon-navbar">
+                    <div class="icon1_dropdown">
+                        <i id="icon1" class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="icon2_dropdown">
+                        <i id="icon2" class="fa-solid fa-wave-square"></i>
+                        <div class="icon-dropdown-waves">
+                            <div class="text-icon2">
+                                <ul>
+                                    <li>
+                                        <a href="#">Mike John responded to your email</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">You have 5 more tasks</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Your friend Michael is in town</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Another notification</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Another one</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile_admin">
+                    <img src="./img/youhana.jpeg" alt="" width="40px" height="40px">
+                    <i id="icon-admin" class="fa-solid fa-sort-down"></i>
+                    <div class="dropdown-profile">
+                        <div class="text-dropdown">
+                            <ul>
+                                <li>
+                                    <a href="#">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#">Setting</a>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li>
+                                    <a href="#">Log out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <h3>CT</h3>
+                    <h3>CREATIVE</h3>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <p>DASHBOARD</p>
+                        </a>
+                    </li>
+                    <li  class="nav-item">
+                        <a href="">
+                            <i class="fa-regular fa-image"></i>
+                            <p>PAGES</p>
+                        </a>
+                    </li>
+                    <li  class="nav-item">
+                        <a href="">
+                            <i class="fa-solid fa-cubes"></i>
+                            <p>COMPONENTS</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">
+                            <i class="fa-brands fa-wpforms"></i>
+                            <p>FORMS</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">
+                            <i class="fa-solid fa-puzzle-piece"></i>
+                            <p>TABLES</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <p>MAPS</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <p>WIDGETS</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <p>CHARTS</p>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <p>CALENDER</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="full-calendar">
+            <div id='calendar'></div>
+        </div>
+    </div>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            initialDate: '2023-01-12',
+            navLinks: true, // can click day/week names to navigate views
+            selectable: true,
+            selectMirror: true,
+
+
+
+/*/////////////////Add Event___ --bottom--___\\\\\\\\\\\\\\\\\\\*/            
+            select: function(arg) {
+                
+                Swal.fire({
+                    title: 'Create an Event',
+                    input: 'text',
+                    inputAttributes: {
+                        autocapitalize: 'off'
+                    },
+                    showCancelButton: true,
+                    confirmButtonText: 'OK',
+                    showLoaderOnConfirm: true,
+                    preConfirm: (title) => {
+                        if (title) {
+                            calendar.addEvent({
+                                title: title,
+                                start: arg.start,
+                                end: arg.end,
+                                allDay: arg.allDay
+                            })
+                            }
+                    },
+
+                    
+                    allowOutsideClick: () => !Swal.isLoading()
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        swalWithBootstrapButtons.fire(
+                        'Added Event',
+                        '',
+                        )
+                    }
+                    })
+            },
+/*/////////////////Add Event___ --top-- ___\\\\\\\\\\\\\\\\\\\*/
+
+
+
+/*///////////////////Delete Event ___--bottom--___\\\\\\\\\\\\\\\\*/
+
+            eventClick: function(arg) {
+                const swalWithBootstrapButtons = Swal.mixin({
+                    customClass: {
+                        confirmButton: 'btn btn-success',
+                        cancelButton: 'btn btn-danger'
+                    },
+                    buttonsStyling: false
+                    })
+
+                    swalWithBootstrapButtons.fire({
+                    title: 'Are you sure?',
+                    text: "You want delete this event",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes, delete it!',
+                    cancelButtonText: 'No, cancel!',
+                    reverseButtons: true
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        swalWithBootstrapButtons.fire(
+                        'Deleted!',
+                        'Your event has been deleted.',
+                        'success',
+                        arg.event.remove()
+                        )
+                    } else if (
+                        /* Read more about handling dismissals below */
+                        result.dismiss === Swal.DismissReason.cancel
+                    ) {
+                        swalWithBootstrapButtons.fire(
+                        'Cancelled',
+                        '',
+                        'error',
+                        )
+                    }
+                    })
+            },
+/*///////////////////  Delete Event___ --top-- ___\\\\\\\\\\\\\\\\*/
+
+
+
+            editable: true,
+            dayMaxEvents: true, // allow "more" link when too many events
+            events: [
+                {
+                title: 'All Day Event',
+                start: '2023-01-01'
+                },
+                {
+                title: 'Long Event',
+                start: '2023-01-07',
+                end: '2023-01-10'
+                },
+                {
+                groupId: 999,
+                title: 'Repeating Event',
+                start: '2023-01-09T16:00:00'
+                },
+                {
+                groupId: 999,
+                title: 'Repeating Event',
+                start: '2023-01-16T16:00:00'
+                },
+                {
+                title: 'Conference',
+                start: '2023-01-11',
+                end: '2023-01-13'
+                },
+                {
+                title: 'Meeting',
+                start: '2023-01-12T10:30:00',
+                end: '2023-01-12T12:30:00'
+                },
+                {
+                title: 'Lunch',
+                start: '2023-01-12T12:00:00'
+                },
+                {
+                title: 'Meeting',
+                start: '2023-01-12T14:30:00'
+                },
+                {
+                title: 'Happy Hour',
+                start: '2023-01-12T17:30:00'
+                },
+                {
+                title: 'Dinner',
+                start: '2023-01-12T20:00:00'
+                },
+                {
+                title: 'Birthday Party',
+                start: '2023-01-13T07:00:00'
+                },
+                {
+                title: 'Click for Google',
+                url: 'http://google.com/',
+                start: '2023-01-28'
+                }
+            ]
+            });
+
+            calendar.render();
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/index.global.js"></script>
+    <script src="./js/calender.js"></script>
+</body>
+</html>

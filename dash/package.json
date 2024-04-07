@@ -1,0 +1,14 @@
+{
+  "name": "dash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch --style expanded sass/dash.scss css/dash.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^4.4.0"
+  }
+}

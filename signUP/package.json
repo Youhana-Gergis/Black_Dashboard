@@ -1,0 +1,11 @@
+{
+  "name": "signup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch --style expanded sass/signUp.scss css/signUp.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "pricing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch --style expanded sass/price.scss css/price.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

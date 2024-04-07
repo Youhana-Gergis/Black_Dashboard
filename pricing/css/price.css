@@ -1,0 +1,500 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #1e1e2f;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+  flex-direction: column;
+}
+.container .title-page h1 {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+.container .title-page h4 {
+  color: rgba(255, 255, 255, 0.6980392157);
+  opacity: 0.7;
+  font-weight: 100;
+  font-size: 1.1rem;
+  max-width: 550px;
+  text-align: center;
+  line-height: 25px;
+}
+.container .cards-pricing {
+  padding: 50px 50px;
+  display: flex;
+}
+.container .cards-pricing .card {
+  background: #27293d;
+  border-radius: 5px;
+}
+.container .cards-pricing .card .card-header {
+  position: relative;
+}
+.container .cards-pricing .card .card-header img {
+  width: 100%;
+  border-radius: 5px 0 0 0;
+}
+.container .cards-pricing .card .card-header h1 {
+  color: #222a42;
+  position: absolute;
+  font-size: 60px;
+  top: 0;
+  background-color: transparent;
+  font-family: fantasy;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+.container .cards-pricing .card .card-body .list-group .list-group-item {
+  color: rgba(255, 255, 255, 0.9019607843);
+  text-align: center;
+  list-style: none;
+  padding: 5px 0;
+}
+.container .cards-pricing .card .card-price {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .cards-pricing .card .card-price .text-on-back {
+  position: relative;
+  font-size: 9.5em;
+  font-weight: 900;
+  color: #3a2d4c;
+}
+.container .cards-pricing .card .card-price .front {
+  position: absolute;
+  z-index: 99999;
+}
+.container .cards-pricing .card .card-price .front .text-on-front {
+  z-index: 2;
+  font-size: 50px;
+}
+.container .cards-pricing .card .card-price .front .plan, .container .cards-pricing .card .card-price .front .text-on-front {
+  text-align: center;
+  color: hsla(0, 0%, 100%, 0.9);
+  font-weight: 900;
+}
+.container .cards-pricing .card .card-footer {
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.container .cards-pricing .card .card-footer button {
+  background: #e14eca;
+  background-image: linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca);
+  background-color: #e14eca;
+  background-position: 100% 0;
+  background-size: 210% 210%;
+  transition: all 0.15s ease;
+  box-shadow: none;
+  color: #ffffff;
+  padding: 11px 40px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}
+.container .cards-pricing .card .card-footer button:hover {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.5), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  transform: translateY(-2px);
+}
+.container .cards-pricing .card2 {
+  background: #ffffff;
+  border-radius: 5px;
+}
+.container .cards-pricing .card2 .card-header {
+  position: relative;
+}
+.container .cards-pricing .card2 .card-header img {
+  width: 100%;
+  border-radius: 5px 0 0 0;
+}
+.container .cards-pricing .card2 .card-header h1 {
+  color: #ffffff;
+  position: absolute;
+  font-size: 60px;
+  top: 0;
+  background-color: transparent;
+  font-family: fantasy;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+.container .cards-pricing .card2 .card-body .list-group .list-group-item {
+  color: #263148;
+  text-align: center;
+  list-style: none;
+  padding: 5px 0;
+}
+.container .cards-pricing .card2 .card-price {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .cards-pricing .card2 .card-price .text-on-back {
+  position: relative;
+  font-size: 9.5em;
+  font-weight: 900;
+  color: #e5fef9;
+}
+.container .cards-pricing .card2 .card-price .front {
+  position: absolute;
+  z-index: 99999;
+}
+.container .cards-pricing .card2 .card-price .front .text-on-front {
+  z-index: 2;
+  font-size: 50px;
+}
+.container .cards-pricing .card2 .card-price .front .plan, .container .cards-pricing .card2 .card-price .front .text-on-front {
+  text-align: center;
+  color: #263148;
+  font-weight: 900;
+}
+.container .cards-pricing .card2 .card-footer {
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.container .cards-pricing .card2 .card-footer button {
+  background: #00f2c3;
+  background-image: linear-gradient(to bottom left, #00f2c3, #0098f0, #00f2c3);
+  background-color: #00f2c3;
+  background-position: 100% 0;
+  background-size: 210% 210%;
+  transition: all 0.15s ease;
+  box-shadow: none;
+  color: #ffffff;
+  padding: 11px 40px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}
+.container .cards-pricing .card2 .card-footer button:hover {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.5), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  transform: translateY(-2px);
+}
+.container .cards-pricing .card3 {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px 15px rgba(38, 49, 72, 0.3);
+  z-index: 3;
+  background: #ffffff;
+  border-radius: 5px;
+}
+.container .cards-pricing .card3 .card-header {
+  position: relative;
+}
+.container .cards-pricing .card3 .card-header img {
+  width: 100%;
+  border-radius: 5px 0 0 0;
+}
+.container .cards-pricing .card3 .card-header h1 {
+  color: #ffffff;
+  position: absolute;
+  font-size: 60px;
+  top: 0;
+  background-color: transparent;
+  font-family: fantasy;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+.container .cards-pricing .card3 .card-body .list-group .list-group-item {
+  color: #263148;
+  text-align: center;
+  list-style: none;
+  padding: 5px 0;
+}
+.container .cards-pricing .card3 .card-price {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .cards-pricing .card3 .card-price .text-on-back {
+  position: relative;
+  font-size: 9.5em;
+  font-weight: 900;
+  color: #fff3f1;
+}
+.container .cards-pricing .card3 .card-price .front {
+  position: absolute;
+  z-index: 99999;
+}
+.container .cards-pricing .card3 .card-price .front .text-on-front {
+  z-index: 2;
+  font-size: 50px;
+}
+.container .cards-pricing .card3 .card-price .front .plan, .container .cards-pricing .card3 .card-price .front .text-on-front {
+  text-align: center;
+  color: hsla(0, 0%, 100%, 0.9);
+  font-weight: 900;
+  color: #263148;
+}
+.container .cards-pricing .card3 .card-footer {
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.container .cards-pricing .card3 .card-footer button {
+  background-color: #ff6491 !important;
+  background-image: linear-gradient(to bottom left, #ff8d72, #ff6491, #ff8d72) !important;
+  background-image: -moz-linear-gradient(to bottom left, #ff8d72, #ff6491, #ff8d72) !important;
+  background-position: 100% 0;
+  background-size: 210% 210%;
+  transition: all 0.15s ease;
+  box-shadow: none;
+  color: #ffffff;
+  padding: 11px 40px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}
+.container .cards-pricing .card3 .card-footer button:hover {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.5), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  transform: translateY(-2px);
+}
+.container .cards-pricing .card4 {
+  background: #ffffff;
+  border-radius: 5px;
+}
+.container .cards-pricing .card4 .card-header {
+  position: relative;
+}
+.container .cards-pricing .card4 .card-header img {
+  width: 100%;
+  border-radius: 5px 0 0 0;
+}
+.container .cards-pricing .card4 .card-header h1 {
+  color: #ffffff;
+  position: absolute;
+  font-size: 60px;
+  top: 0;
+  background-color: transparent;
+  font-family: fantasy;
+  letter-spacing: 3px;
+  font-weight: 100;
+  left: 20px;
+}
+.container .cards-pricing .card4 .card-body .list-group .list-group-item {
+  color: #263148;
+  text-align: center;
+  list-style: none;
+  padding: 5px 0;
+}
+.container .cards-pricing .card4 .card-price {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .cards-pricing .card4 .card-price .text-on-back {
+  position: relative;
+  font-size: 9.5em;
+  font-weight: 900;
+  color: #ffeef4;
+}
+.container .cards-pricing .card4 .card-price .front {
+  position: absolute;
+  z-index: 99999;
+}
+.container .cards-pricing .card4 .card-price .front .text-on-front {
+  z-index: 2;
+  font-size: 50px;
+}
+.container .cards-pricing .card4 .card-price .front .plan, .container .cards-pricing .card4 .card-price .front .text-on-front {
+  text-align: center;
+  font-weight: 900;
+}
+.container .cards-pricing .card4 .card-footer {
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.container .cards-pricing .card4 .card-footer button {
+  background: #fd5d93;
+  background-image: linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93);
+  background-color: #fd5d93;
+  background-position: 100% 0;
+  background-size: 210% 210%;
+  transition: all 0.15s ease;
+  box-shadow: none;
+  color: #ffffff;
+  padding: 11px 40px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}
+.container .cards-pricing .card4 .card-footer button:hover {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.5), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  transform: translateY(-2px);
+}
+.container .progressBar-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 50px;
+}
+.container .progressBar-text .text-plan h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.container .progressBar-text .text-plan p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  max-width: 400px;
+  line-height: 23px;
+}
+.container .progressBar-text .progress-all {
+  flex: 0 0 30%;
+}
+.container .progressBar-text .progress-all .progress-bar span, .container .progressBar-text .progress-all .progress-bar2 span {
+  color: #ffffff;
+  font-size: 12px;
+}
+.container .progressBar-text .progress-all .progress-bar .progress-back, .container .progressBar-text .progress-all .progress-bar .progress-bar2 .progress-back2, .container .progressBar-text .progress-all .progress-bar2 .progress-bar .progress-back2, .container .progressBar-text .progress-all .progress-bar2 .progress-back, .container .progressBar-text .progress-all .progress-bar2 .progress-back2 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  height: 0.4rem;
+  overflow: hidden;
+  font-size: 0.65625rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0.875rem;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.container .progressBar-text .progress-all .progress-bar .progress-back .progress-bar-style, .container .progressBar-text .progress-all .progress-bar2 .progress-back .progress-bar-style, .container .progressBar-text .progress-all .progress-bar2 .progress-back2 .progress-bar-style, .container .progressBar-text .progress-all .progress-bar2 .progress-back2 .progress-bar-style2 {
+  background: #ff6491;
+  background-image: linear-gradient(to bottom left, #ff6491, #ff8d72, #ff6491);
+  background-size: 210% 210%;
+  background-position: 100% 0;
+  border-radius: 0.875rem;
+  width: 60%;
+  height: 100%;
+}
+.container .progressBar-text .progress-all .progress-bar2 span {
+  color: #ffffff;
+  font-size: 12px;
+}
+.container .progressBar-text .progress-all .progress-bar2 .progress-back2 .progress-bar-style2 {
+  background: #ba54f5;
+  background-image: linear-gradient(to bottom left, #ba54f5, #e14eca, #ba54f5);
+  background-size: 210% 210%;
+  background-position: 100% 0;
+  width: 30%;
+}
+.container .footer {
+  width: 100%;
+}
+.container .footer .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+}
+.container .footer .container-fluid .nav-footer {
+  display: flex;
+}
+.container .footer .container-fluid .nav-footer .nav-item {
+  gap: 10px;
+  margin-left: 10px;
+  list-style: none;
+}
+.container .footer .container-fluid .nav-footer .nav-item a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 100;
+}
+.container .footer .container-fluid .nav-footer .nav-item a:hover {
+  color: #e14eca;
+}
+.container .footer .container-fluid .copy-right a {
+  text-decoration: none;
+  color: #ba54f5;
+}
+.container .footer .container-fluid .copy-right a:hover {
+  color: #e14eca;
+}
+.container .footer .container-fluid .copy-right h5 {
+  color: #ffffff;
+  font-weight: 100;
+}
+
+@media (max-width: 992px) {
+  .container .cards-pricing {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .container .title-page {
+    margin-bottom: 30px;
+  }
+  .container .cards-pricing {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 15px;
+  }
+  .container .cards-pricing .card {
+    margin-bottom: 30px;
+  }
+  .container .cards-pricing .card2 {
+    margin-bottom: 30px;
+  }
+  .container .cards-pricing .card3 {
+    transform: scale(1);
+    z-index: 1;
+    margin-bottom: 30px;
+  }
+  .container .progressBar-text {
+    padding: 0 15px;
+    flex-direction: column;
+  }
+  .container .progressBar-text .text-plan {
+    margin-top: 30px;
+  }
+  .container .progressBar-text .text-plan p {
+    max-width: 100%;
+  }
+  .container .progressBar-text .progress-all {
+    width: 100%;
+  }
+  .container .footer .container-fluid {
+    flex-direction: column;
+  }
+  .container .footer .container-fluid .nav-footer {
+    margin-bottom: 10px;
+  }
+}
+
+/*# sourceMappingURL=price.css.map */
