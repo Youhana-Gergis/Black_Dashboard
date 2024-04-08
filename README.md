@@ -24,3 +24,19 @@ The Three  page  include calender you can add an event one or more days
 The four page include google map
 
 ![nine](https://github.com/Youhana-Gergis/Black_Dashboard/assets/124525093/58847bd8-6318-4823-a2ec-1bb6e778cd71)
+
+
+five pages price this page there is the price pro and mid, basic, trial
+
+
+
+The six page
+
+
+
+The seven page
+
+
+
+The eight page
+
