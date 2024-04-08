@@ -49,6 +49,6 @@ The seven page sign up
 
 ***************************************************************************************
 
-eight page lock this page is for every employee to be safer
+The eight page lock this page is for every employee to be safer
 
 ![ten](https://github.com/Youhana-Gergis/Black_Dashboard/assets/124525093/5bedf548-295e-4a92-b63c-d278c779e4c2)
