@@ -18,6 +18,8 @@ The two page form update data employee
 ![six](https://github.com/Youhana-Gergis/Black_Dashboard/assets/124525093/d13c8887-3c9c-4ca9-82e4-23ed34552a75)
 
 
+***************************************************************************************
+
 The Three  page  include calender you can add an event one or more days
 
 ![seven](https://github.com/Youhana-Gergis/Black_Dashboard/assets/124525093/1adb0876-ced9-4ef3-9cd2-2b50bce832c2)
@@ -27,21 +29,25 @@ The four page include google map
 
 ![nine](https://github.com/Youhana-Gergis/Black_Dashboard/assets/124525093/58847bd8-6318-4823-a2ec-1bb6e778cd71)
 
+***************************************************************************************
 
 five pages price this page there is the price pro and mid, basic, trial
 
 ![thirteen](https://github.com/Youhana-Gergis/Black_Dashboard/assets/124525093/ba859af9-9476-4964-b606-6a2fe3695396)
 
+***************************************************************************************
 
 The six page login
 
 ![eleven](https://github.com/Youhana-Gergis/Black_Dashboard/assets/124525093/fa596755-f7b6-4520-a08e-71f51f9716ca)
 
+***************************************************************************************
 
 The seven page sign up
 
 ![twelve](https://github.com/Youhana-Gergis/Black_Dashboard/assets/124525093/7ff6cac4-a28a-4ba5-b1cb-3bf8cc001f95)
 
+***************************************************************************************
 
 eight page lock this page is for every employee to be safer
 
