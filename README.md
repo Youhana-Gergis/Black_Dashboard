@@ -31,13 +31,14 @@ five pages price this page there is the price pro and mid, basic, trial
 ![thirteen](https://github.com/Youhana-Gergis/Black_Dashboard/assets/124525093/ba859af9-9476-4964-b606-6a2fe3695396)
 
 
-The six page
+The six page login
+
+![eleven](https://github.com/Youhana-Gergis/Black_Dashboard/assets/124525093/fa596755-f7b6-4520-a08e-71f51f9716ca)
+
+
+The seven page sign up
 
 
 
-The seven page
-
-
-
-The eight page
+eight page lock this page is for every employee to be safer
 
